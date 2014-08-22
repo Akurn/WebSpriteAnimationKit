@@ -34,8 +34,7 @@ Sprite.prototype.render = function(ct) {
     if (typeof(ctx) != "object") { //throw an error if there still is no context to use
         throw "Error: Canvas Context has not been defined.";
     }
-    
-    
+
     //calculate delta if needed
     if (this.fps) {
         var framesPassed = 0;
@@ -115,7 +114,6 @@ Sprite.prototype.render = function(ct) {
                         cellPositionY = 0;
                     }
                     this.frame = 0;
-                    
                 }
             }
         }
@@ -132,6 +130,5 @@ Sprite.prototype.render = function(ct) {
         if (!this.fps && this.totalFrames) { //if not using fps and delta, & more than 1 frame of animation, then just incremement
             this.frame++;
         }
-        
     }
 };
